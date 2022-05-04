@@ -1,0 +1,16 @@
+﻿@model LearnAspMVC.Models.Category
+
+@{
+    ViewData["Title"] = "Delete " + Model.Name;
+}
+
+<form class="card" method="post" asp-action="DeleteCategory">
+    <input asp-for="Id" hidden />
+    <div class="card-body">
+        <h2 class="card-title text-center">Are you sure you want to delete "@Model.Name"?</h2>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-danger mx-3">Delete</button>
+            <a class="btn btn-primary mx-3" asp-action="show">Cancel</a>
+        </div>
+    </div>
+</form>
